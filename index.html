@@ -18,16 +18,16 @@
   <body>
     <div>
       <!-- header starts here -->
-      <header class="fixed top-0 w-screen py-3 z-10 bg-blue-950">
-        <nav class="flex flex-row justify-between px-36 items-center">
+      <header class="fixed top-0 w-screen py-3 z-10 bg-transparent" id="navbar">
+        <nav class="flex flex-row justify-between px-4 lg:px-36 items-center">
           <div>
             <img
               src="./assets/wasl-logo-fin-removebg-preview.png"
-              class="w-40"
+              class="w-28 lg:w-40"
             />
           </div>
-          <div>
-            <ul class="flex flex-row gap-8 text-white">
+          <div class="hidden lg:block">
+            <ul class="flex flex-col lg:flex-row gap-8 text-white">
               <li>
                 <a href="#" class="hover:underline hover:underline-offset-8"
                   >HOME</a
@@ -44,6 +44,9 @@
               </li>
             </ul>
           </div>
+          <div class="lg:hidden">
+            <i class="fa-solid fa-bars text-2xl text-white" onclick="onToggleMenu(this)"></i>
+          </div>
         </nav>
       </header>
       <!-- header ends here -->
@@ -51,24 +54,23 @@
       <!-- banner starts -->
       <div>
         <section
-          class="bg-gradient-to-b from-blue-950 to-blue-500 min-h-screen flex flex-row px-36 items-center"
+          class="bg-gradient-to-b from-blue-950 to-blue-500 min-h-screen flex flex-row px-4 lg:px-36 items-center"
         >
-          <div class="w-[60%]">
-            <h2 class="text-5xl text-white font-bold">Hello</h2>
-            <p class="mb-20 mt-8 text-xl text-blue-200">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit amet
-              magnam, ipsum nulla eveniet fugiat tempore assumenda, minus,
-              aperiam harum non praesentium odio nostrum provident soluta
-              facilis sint vel! Veniam voluptates ad porro quos voluptatibus,
-              qui illum doloremque sit! Ipsam.
+          <div class="w-full lg:w-[60%]">
+            <h2 class="text-xl lg:text-5xl text-white font-bold">
+              Welcome to Wasl International Exim
+            </h2>
+            <span class="inline-block w-40 py-px bg-blue-400"></span>
+            <p class="my-10 text-lg lg:text-xl text-white">
+              Quality products from India at a competitive cost
             </p>
-            <a href="#" class="py-3 px-4 rounded-full bg-white animate-pulse"
+            <a href="#" class="py-3 px-4 rounded-full bg-blue-400 text-white"
               >Talk With Us</a
             >
           </div>
           <div>
             <lottie-player
-              class="pl-24 lg:h-screen md:pt-14 float-right md:block hidden"
+              class="pl-24 lg:h-screen md:pt-14 float-right lg:block hidden"
               src="https://assets4.lottiefiles.com/packages/lf20_fi0ty9ak.json"
               background="transparent"
               speed="1"
@@ -81,25 +83,76 @@
 
       <!-- About us starts here -->
 
-      <div class="min-h-screen">
-        <h2 class="text-center text-5xl font-bold text-blue-900 pt-20 pb-8">
+      <div class="min-h-screen bg-blue-50">
+        <!-- <h2 class="text-center text-5xl font-bold text-blue-900 pt-20 pb-8">
           About Us
-        </h2>
-        <div class="grid grid-cols-2 px-36 pt-5">
-          <div class="relative">
+        </h2> -->
+        <div class="md:grid md:grid-cols-2 px-4 lg:px-36 pt-20">
+          <div class="md:relative">
             <img
               src="https://images.unsplash.com/photo-1605732563938-8f8d4e7ad651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
               alt="container"
-              class="absolute top-0 left-0 w-60"
+              class="md:absolute md:top-0 md:left-0 md:w-60 hidden md:block"
             />
 
             <img
               src="https://images.unsplash.com/photo-1576423596782-8c5478efd11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
               alt="container"
-              class="absolute top-32 left-20 w-64 h-80 border-4 border-blue-800"
+              class="md:absolute md:top-32 md:left-20 md:w-64 h-80 border-4 border-blue-800"
             />
           </div>
-          <div></div>
+          <div>
+            <p class="text-blue-500 md:mt-1 mt-8 text-xl">
+              About Us
+              <span class="inline-block w-20 py-px bg-blue-500"></span>
+            </p>
+
+            <h2 class="text-2xl font-bold text-blue-900 py-3">
+              Welcome to WASL International Exim
+            </h2>
+            <p class="text-xl font-bold">We Provide Premium Quality Products</p>
+            <p class="text-xl font-bold">We Provide Reliable & Fast Delivery</p>
+            <p class="text-lg py-8 text-gray-700">
+              We are an export-import company based in Kanyakumari, Tamil Nadu,
+              India. Committed to exceptional quality and timely delivery, we
+              trade globally across various sectors, including food products.
+              With a focus on transparency, integrity, and professionalism, we
+              prioritize long-term partnerships. Our team's expertise and
+              adherence to international trade regulations ensure seamless
+              operations. Experience our personalized solutions, end-to-end
+              support, and customer-centric approach as we unlock new
+              opportunities together. Trust Wasl International to be your
+              reliable partner in the world of global trade.
+            </p>
+            <div>
+              <ul class="grid grid-rows-3 md:grid-flow-col gap-4 font-bold">
+                <li>
+                  <i class="fa-solid fa-circle-check text-blue-500"></i>
+                  <p class="inline-block pl-3">Long-term Relationship</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check text-blue-500"></i>
+                  <p class="inline-block pl-3">Professional Approach</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check text-blue-500"></i>
+                  <p class="inline-block pl-3">High Quality Products</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check text-blue-500"></i>
+                  <p class="inline-block pl-3">On Time Delivery</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check text-blue-500"></i>
+                  <p class="inline-block pl-3">Reasonable Costs</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check text-blue-500"></i>
+                  <p class="inline-block pl-3">Client Satisfaction</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -114,68 +167,76 @@
       </div> -->
 
       <!-- product section -->
-      <div class="min-h-screen bg-blue-100 px-36">
-        <h2 class="text-5xl pt-20 pb-8 text-blue-600 font-bold text-center">
+      <div class="min-h-screen bg-blue-100 px-4 lg:px-36">
+        <h2 class="text-5xl pt-20 pb-8 text-blue-950 font-bold text-center">
           Products
         </h2>
-        <div class="flex flex-row gap-8 pt-14">
-          <div
-            class="shadow-lg shadow-blue-100 hover:shadow-blue-300 text-center px-4 pb-8 pt-4"
-          >
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-14">
+          <div class="shadow-lg shadow-blue-10 relative group text-center p-4">
             <img
               src="https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
               alt="product"
             />
-            <h2 class="text-2xl">Product</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-              odit!
-            </p>
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-opacity duration-300 p-8"
+            >
+              <h2 class="text-2xl text-white">Product 1</h2>
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cumque, odit!
+              </p>
+            </div>
           </div>
-          <div
-            class="shadow-lg shadow-blue-100 hover:shadow-blue-300 text-center px-4 pb-8 pt-4"
-          >
+          <div class="shadow-lg shadow-blue-10 relative group text-center p-4">
             <img
               src="https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
               alt="product"
             />
-            <h2 class="text-2xl">Product</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-              odit!
-            </p>
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-opacity duration-300 p-8"
+            >
+              <h2 class="text-2xl text-white">Product 1</h2>
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cumque, odit!
+              </p>
+            </div>
           </div>
-          <div
-            class="shadow-lg shadow-blue-100 hover:shadow-blue-300 text-center px-4 pb-8 pt-4"
-          >
+          <div class="shadow-lg shadow-blue-10 relative group text-center p-4">
             <img
               src="https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
               alt="product"
             />
-            <h2 class="text-2xl">Product</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-              odit!
-            </p>
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-opacity duration-300 p-8"
+            >
+              <h2 class="text-2xl text-white">Product 1</h2>
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cumque, odit!
+              </p>
+            </div>
           </div>
-          <div
-            class="shadow-lg shadow-blue-100 hover:shadow-blue-300 text-center px-4 pb-8 pt-4"
-          >
+          <div class="shadow-lg shadow-blue-10 relative group text-center p-4">
             <img
               src="https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
               alt="product"
             />
-            <h2 class="text-2xl">Product</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-              odit!
-            </p>
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-opacity duration-300 p-8"
+            >
+              <h2 class="text-2xl text-white">Product 1</h2>
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cumque, odit!
+              </p>
+            </div>
           </div>
         </div>
         <div class="mt-14 flex justify-center">
           <a
             href="#"
-            class="px-14 py-4 bg-blue-400 text-white rounded-full text-2xl hover:bg-blue-800"
+            class="px-14 py-4 bg-blue-800 text-white rounded-full text-2xl hover:bg-blue-950"
             >Show All Products</a
           >
         </div>
@@ -183,17 +244,23 @@
 
       <!-- contact section -->
       <div
-        class="min-h-screen bg-backimg bg-fixed bg-no-repeat bg-cover bg-center text-center flex justify-center items-center"
+        class="min-h-screen bg-backimg bg-fixed bg-no-repeat bg-cover bg-center text-center flex flex-col justify-center items-center"
       >
-        <a href="#" class="text-5xl text-white font-bold">Connect with Us</a>
+        <p class="text-5xl text-white font-bold">
+          Your INDIAN Merchant Partner
+        </p>
+        <span class="inline-block w-80 py-1 bg-blue-500"></span>
+        <p>Quality Products from India at a competitive cost</p>
       </div>
 
       <!--  -->
 
-      <div class="min-h-screen bg-blue-950 px-36">
-        <h2>Contact Us</h2>
-        <div class="flex flex-row">
-          <div class="flex flex-col gap-5 w-1/4">
+      <div class="min-h-screen bg-blue-950 px-4 lg:px-36">
+        <h2 class="text-5xl pt-20 pb-14 text-blue-600 font-bold text-center">
+          Contact Us
+        </h2>
+        <div class="grid lg:grid-cols-2 justify-around">
+          <div class="flex flex-col gap-5 w-3/5">
             <input
               type="text"
               class="py-2 pl-4 border-2 border-blue-800 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
@@ -221,10 +288,50 @@
               </button>
             </div>
           </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white pb-4">Contact Details</h3>
+            <ul class="text-xl">
+              <li class="py-3">
+                <a href="tel:+919667696783">
+                  <i class="fa-solid fa-phone px-py text-blue-600"></i>
+                  <p class="inline-block px-2 text-white">+919667696783</p>
+                </a>
+              </li>
+              <li class="py-3">
+                <a href="mailto:info@waslintl.com">
+                  <i class="fa-solid fa-envelope px-py text-blue-600"></i>
+                  <p class="inline-block px-2 text-white">info@waslintl.com</p>
+                </a>
+              </li>
+              <li class="py-3">
+                <a href="https://goo.gl/maps/d3Y6nB2u15iaDAtm7" target="_blank">
+                  <i class="fa-solid fa-location-dot px-py text-blue-600"></i>
+                  <span class="inline-block align-top px-2 text-white">
+                    <p>10/20A/4,</p>
+                    <p>East Kulasekaranputhur Main Road,</p>
+                    <p>Vellamadam, Kanyakumari - 629303</p>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 0) {
+          navbar.classList.remove("bg-transparent");
+          navbar.classList.add("bg-blue-950");
+        } else {
+          navbar.classList.remove("bg-blue-950");
+          navbar.classList.add("bg-transparent");
+        }
+      });
+    </script>
   </body>
 </html>
