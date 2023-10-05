@@ -45,7 +45,10 @@
             </ul>
           </div>
           <div class="lg:hidden">
-            <i class="fa-solid fa-bars text-2xl text-white" onclick="onToggleMenu(this)"></i>
+            <i
+              class="fa-solid fa-bars text-2xl text-white"
+              onclick="onToggleMenu(this)"
+            ></i>
           </div>
         </nav>
       </header>
@@ -57,11 +60,11 @@
           class="bg-gradient-to-b from-blue-950 to-blue-500 min-h-screen flex flex-row px-4 lg:px-36 items-center"
         >
           <div class="w-full lg:w-[60%]">
-            <h2 class="text-xl lg:text-5xl text-white font-bold">
+            <h2 class="text-3xl lg:text-5xl text-white font-bold">
               Welcome to Wasl International Exim
             </h2>
             <span class="inline-block w-40 py-px bg-blue-400"></span>
-            <p class="my-10 text-lg lg:text-xl text-white">
+            <p class="my-10 text-xl lg:text-2xl text-white">
               Quality products from India at a competitive cost
             </p>
             <a href="#" class="py-3 px-4 rounded-full bg-blue-400 text-white"
@@ -110,8 +113,12 @@
             <h2 class="text-xl md:text-2xl font-bold text-blue-900 md:py-3">
               Welcome to WASL International Exim
             </h2>
-            <p class="md:text-xl font-bold">We Provide Premium Quality Products</p>
-            <p class="md:text-xl font-bold">We Provide Reliable & Fast Delivery</p>
+            <p class="md:text-xl font-bold">
+              We Provide Premium Quality Products
+            </p>
+            <p class="md:text-xl font-bold">
+              We Provide Reliable & Fast Delivery
+            </p>
             <p class="text-lg py-8 text-gray-700">
               We are an export-import company based in Kanyakumari, Tamil Nadu,
               India. Committed to exceptional quality and timely delivery, we
@@ -246,27 +253,28 @@
       <div
         class="bg-backimg bg-fixed bg-no-repeat bg-cover bg-center text-center flex flex-col justify-center items-center"
       >
-      <div class="py-16">
-        <p class="text-5xl text-white font-bold">
-          Your INDIAN Merchant Partner
-        </p>
-        <span class="inline-block w-80 py-1 bg-blue-500"></span>
-        <p>Quality Products from India at a competitive cost</p>
-      </div>
-        
+        <div class="py-16">
+          <p class="text-5xl text-white font-bold">
+            Your INDIAN Merchant Partner
+          </p>
+          <span class="inline-block w-80 py-1 bg-blue-500"></span>
+          <p class="text-white font-bold">Quality Products from India at a competitive cost</p>
+        </div>
       </div>
 
       <!--  -->
 
-      <div class="min-h-screen bg-blue-950 px-4 lg:px-36">
-        <h2 class="text-5xl pt-20 pb-14 text-blue-600 font-bold text-center">
+      <div class="min-h-screen bg-blue-50 px-4 lg:px-36">
+        <h2 class="text-5xl pt-20 pb-14 text-blue-950 font-bold text-center">
           Contact Us
         </h2>
-        <div class="grid lg:grid-cols-2 place-items-center lg:justify-around">
-          <div class="flex flex-col py-4 gap-5 w-3/5">
+        <div class="flex justify-center items-center">
+          <div
+            class="flex flex-col py-4 gap-5 w-full lg:w-6/12 p-2 lg:p-12 rounded-b-xl shadow-lg shadow-blue-200"
+          >
             <input
               type="text"
-              class="py-2 pl-4 border-2 border-blue-800 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
+              class="py-2 pl-4 border-2 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
               placeholder="Enter Name *"
             />
             <input
@@ -283,7 +291,7 @@
               class="py-2 pl-4 border-blue-800 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
               placeholder="Message *"
             ></textarea>
-            <div class="flex justify-end">
+            <div class="flex justify-center">
               <button
                 class="bg-blue-500 rounded-full py-2 px-5 text-white w-fit hover:bg-blue-600"
               >
@@ -291,36 +299,89 @@
               </button>
             </div>
           </div>
-          <div>
-            <h3 class="text-2xl font-bold text-white pb-4">Contact Details</h3>
-            <ul class="text-xl">
-              <li class="py-3">
-                <a href="tel:+919667696783">
-                  <i class="fa-solid fa-phone px-py text-blue-600"></i>
-                  <p class="inline-block px-2 text-white">+919667696783</p>
-                </a>
-              </li>
-              <li class="py-3">
-                <a href="mailto:info@waslintl.com">
-                  <i class="fa-solid fa-envelope px-py text-blue-600"></i>
-                  <p class="inline-block px-2 text-white">info@waslintl.com</p>
-                </a>
-              </li>
-              <li class="py-3">
-                <a href="https://goo.gl/maps/d3Y6nB2u15iaDAtm7" target="_blank">
-                  <i class="fa-solid fa-location-dot px-py text-blue-600"></i>
-                  <span class="inline-block align-top px-2 text-white">
-                    <p>10/20A/4,</p>
-                    <p>East Kulasekaranputhur Main Road,</p>
-                    <p>Vellamadam, Kanyakumari - 629303</p>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
+      <footer class="bg-blue-950">
+        <div class="p-4 lg:p-8 flex flex-col items-center lg:grid grid-rows-2 grid-flow-col">
+          <section class="row-start-1">
+            <a>
+              <img
+                src="./assets/wasl-logo-fin-removebg-preview.png"
+                class="w-28 lg:w-36"
+              />
+            </a>
+          </section>
+          <section class="row-start-2 col-start-3 lg:place-self-end">
+            <article class="flex flex-col">
+              <h2 class="font-bold text-white py-2 text-center lg:text-right text-xl">For Queries</h2>
+              <a href="tel:+919667696783">
+                <p class="text-pink-200 text-center lg:text-right">+919667696783</p>
+              </a>
+              <a href="mailto:info@waslintl.com">
+                <p class="text-pink-200 text-center lg:text-right">info@waslintl.com</p>
+              </a>
+            </article>
+          </section>
+
+          <section class="row-start-2">
+            <article>
+              <h2 class="text-center lg:text-left font-bold text-white text-xl py-2">Meet Us</h2>
+              <a href="https://goo.gl/maps/d3Y6nB2u15iaDAtm7" target="_blank">
+                <!-- <i class="fa-solid fa-location-dot px-py text-blue-600"></i> -->
+                <span class="inline-block align-top text-white text-center lg:text-start">
+                  <p class="">10/20A/4,East Kulasekaranputhur</p>
+                  <p>Main Road, Vellamadam,</p>
+                  <p>Kanyakumari - 629303</p>
+                </span>
+              </a>
+            </article>
+          </section>
+          <section class="row-start-1 col-start-3 flex flex-row gap-5 justify-end pt-4 py-2 text-xl lg:text-3xl text-white">
+            <a href="" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </section>
+          <p class="row-start-1 row-end-3 place-self-center py-4 text-white">Copyright &#169; 2023 WASL</p>
+        </div>
+      </footer>
+
+      <!-- <div>
+        <h3 class="text-2xl font-bold text-white pb-4">Contact Details</h3>
+        <ul class="text-xl">
+          <li class="py-3">
+            <a href="tel:+919667696783">
+              <i class="fa-solid fa-phone px-py text-blue-600"></i>
+              <p class="inline-block px-2 text-white">+919667696783</p>
+            </a>
+          </li>
+          <li class="py-3">
+            <a href="mailto:info@waslintl.com">
+              <i class="fa-solid fa-envelope px-py text-blue-600"></i>
+              <p class="inline-block px-2 text-white">info@waslintl.com</p>
+            </a>
+          </li>
+          <li class="py-3">
+            <a href="https://goo.gl/maps/d3Y6nB2u15iaDAtm7" target="_blank">
+              <i class="fa-solid fa-location-dot px-py text-blue-600"></i>
+              <span class="inline-block align-top px-2 text-white">
+                <p>10/20A/4,</p>
+                <p>East Kulasekaranputhur Main Road,</p>
+                <p>Vellamadam, Kanyakumari - 629303</p>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div> -->
     </div>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -336,6 +397,19 @@
           navbar.classList.add("bg-transparent");
         }
       });
+
+      const onToggleMenu = (icon) => {
+        const navbar = document.getElementById("navbar");
+        const menuIcon = icon;
+
+        if (menuIcon.classList.contains("fa-bars")) {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-xmark");
+        } else {
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        }
+      };
     </script>
   </body>
 </html>
