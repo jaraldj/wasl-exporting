@@ -18,31 +18,43 @@
   <body>
     <div>
       <!-- header starts here -->
-      <header class="fixed top-0 w-screen py-3 z-10 bg-transparent" id="navbar">
+      <header class="fixed top-0 w-screen py-3 z-10 bg-blue-950" id="navbar">
         <nav class="flex flex-row justify-between px-4 lg:px-36 items-center">
           <div>
+            <a href="#home">
             <img
               src="./assets/wasl-logo-fin-removebg-preview.png"
               class="w-28 lg:w-40"
             />
+            </a>
           </div>
-          <div class="hidden lg:block">
-            <ul class="flex flex-col lg:flex-row gap-8 text-white">
+          <!-- <div class="hidden lg:block nav-links">
+            <ul class="flex flex-col lg:flex-row gap-8 text-white top-[20%]"> -->
+              <div
+            class="nav-links lg:static absolute bg-blue-950 lg:min-h-fit min-h-fit left-0 top-[8%] w-full lg:block hidden lg:py-0 py-14"
+          >
+            <div
+              class="flex lg:items-end lg:justify-end items-center justify-center"
+            >
+              <ul
+                class="flex lg:flex-row flex-col items-center lg:gap-[3vw] gap-8 text-white"
+              >
               <li>
-                <a href="#" class="hover:underline hover:underline-offset-8"
+                <a href="#home" class="hover:underline hover:underline-offset-8 hover:ease-in hover:duration-800 transition-all"
                   >HOME</a
                 >
               </li>
               <li>
-                <a href="#">ABOUT</a>
+                <a href="#about_us">ABOUT</a>
               </li>
               <li>
-                <a href="#">PRODUCTS</a>
+                <a href="#products">PRODUCTS</a>
               </li>
               <li>
-                <a href="#">CONTACT US</a>
+                <a href="#contact_us">CONTACT US</a>
               </li>
             </ul>
+            </div>
           </div>
           <div class="lg:hidden">
             <i
@@ -55,7 +67,7 @@
       <!-- header ends here -->
 
       <!-- banner starts -->
-      <div>
+      <div id="home">
         <section
           class="bg-gradient-to-b from-blue-950 to-blue-500 min-h-screen flex flex-row px-4 lg:px-36 items-center"
         >
@@ -86,12 +98,12 @@
 
       <!-- About us starts here -->
 
-      <div class="min-h-screen bg-blue-50">
+      <div class="min-h-screen bg-blue-50 pt-4" id="about_us">
         <!-- <h2 class="text-center text-5xl font-bold text-blue-900 pt-20 pb-8">
           About Us
         </h2> -->
         <div class="md:grid md:grid-cols-2 px-4 lg:px-36 pt-20">
-          <div class="md:relative float-left md:float-none">
+          <div class="md:relative float-left md:float-none pr-4">
             <img
               src="https://images.unsplash.com/photo-1605732563938-8f8d4e7ad651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
               alt="container"
@@ -101,11 +113,11 @@
             <img
               src="https://images.unsplash.com/photo-1576423596782-8c5478efd11f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
               alt="container"
-              class="md:absolute md:top-32 md:left-20 w-9/12 md:w-64 h-40 md:h-80 border-4 border-blue-800"
+              class="md:absolute md:top-32 md:left-20 w-full md:w-64 h-40 md:h-80 border-4 border-blue-800"
             />
           </div>
           <div>
-            <p class="text-blue-500 md:mt-1 text-xl">
+            <p class="text-blue-500 md:mt-1 text-lg md:text-xl">
               About Us
               <span class="inline-block w-20 py-px bg-blue-500"></span>
             </p>
@@ -113,13 +125,13 @@
             <h2 class="text-xl md:text-2xl font-bold text-blue-900 md:py-3">
               Welcome to WASL International Exim
             </h2>
-            <p class="md:text-xl font-bold">
+            <p class="text-sm md:text-xl font-bold">
               We Provide Premium Quality Products
             </p>
-            <p class="md:text-xl font-bold">
+            <p class="text-sm md:text-xl font-bold">
               We Provide Reliable & Fast Delivery
             </p>
-            <p class="text-lg py-8 text-gray-700">
+            <p class="text-sm md:text-lg py-8 text-gray-700">
               We are an export-import company based in Kanyakumari, Tamil Nadu,
               India. Committed to exceptional quality and timely delivery, we
               trade globally across various sectors, including food products.
@@ -174,7 +186,7 @@
       </div> -->
 
       <!-- product section -->
-      <div class="min-h-screen bg-blue-50 px-4 lg:px-36">
+      <div class="min-h-screen bg-blue-50 px-4 lg:px-36" id="products">
         <h2 class="text-5xl pt-20 pb-8 text-blue-950 font-bold text-center">
           Products
         </h2>
@@ -264,7 +276,7 @@
 
       <!--  -->
 
-      <div class="min-h-screen bg-blue-50 px-4 lg:px-36">
+      <div class="min-h-screen bg-blue-50 px-4 lg:px-36" id="contact_us">
         <h2 class="text-5xl pt-20 pb-14 text-blue-950 font-bold text-center">
           Contact Us
         </h2>
@@ -387,20 +399,22 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script>
-      window.addEventListener("scroll", function () {
-        const navbar = document.getElementById("navbar");
-        if (window.scrollY > 0) {
-          navbar.classList.remove("bg-transparent");
-          navbar.classList.add("bg-blue-950");
-        } else {
-          navbar.classList.remove("bg-blue-950");
-          navbar.classList.add("bg-transparent");
-        }
-      });
+      // window.addEventListener("scroll", function () {
+      //   const navbar = document.getElementById("navbar");
+      //   if (window.scrollY > 0) {
+      //     navbar.classList.remove("lg:bg-transparent");
+      //     navbar.classList.add("lg:bg-blue-950");
+      //   } else {
+      //     navbar.classList.remove("lg:bg-blue-950");
+      //     navbar.classList.add("lg:bg-transparent");
+      //   }
+      // });
 
       const onToggleMenu = (icon) => {
         const navbar = document.getElementById("navbar");
         const menuIcon = icon;
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("hidden")
 
         if (menuIcon.classList.contains("fa-bars")) {
           menuIcon.classList.remove("fa-bars");
@@ -408,7 +422,14 @@
         } else {
           menuIcon.classList.remove("fa-xmark");
           menuIcon.classList.add("fa-bars");
+          // navLinks.classList.add("hidden");
         }
+
+        navLinks.addEventListener("click", function () {
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+          navLinks.classList.add("hidden");
+        })
       };
     </script>
   </body>
