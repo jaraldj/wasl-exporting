@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="prodTitle"></title>
+    <link rel="stylesheet" href="../css/tailwind.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-blue-50">
+    <div>
+      <header class="fixed top-0 w-screen py-3 z-10 bg-blue-950" id="navbar">
+        <nav class="flex justify-between px-4 lg:px-36 items-center">
+          <div>
+            <a href="../index.html">
+              <img
+                src="../assets/wasl-logo-fin-removebg-preview.png"
+                class="w-28 lg:w-40"
+              />
+            </a>
+          </div>
+          <div
+            class="bg-blue-950 lg:bg-transparent lg:min-h-fit min-h-fit left-0 top-[8%] w-fit text-white text-lg"
+          >
+            <a href="#" onclick="history.back()"
+              ><i class="fa-solid fa-backward pr-1"></i>Go Back</a
+            >
+          </div>
+          <!-- <div class="lg:hidden">
+            <i
+              class="fa-solid fa-bars text-2xl text-white"
+              onclick="onToggleMenu(this)"
+            ></i>
+          </div> -->
+        </nav>
+      </header>
+    </div>
+    <div class="px-4 lg:px-36 pt-20 lg:pt-40 pb-12 lg:pb-40">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div
+          id="singleProductImage"
+          class="flex justify-center items-center"
+        ></div>
+        <div class="lg:pl-8">
+          <p class="text-3xl font-semibold pb-6" id="prodName"></p>
+          <ul id="cocoLi" class="list-disc text-lg"></ul>
+        </div>
+      </div>
+      <div
+        id="whatsap"
+        class="bg-green-500 p-2 lg:px-4 rounded-full lg:rounded-2xl lg:float-right text-white"
+      ></div>
+    </div>
+
+    <footer class="bg-blue-950 pb-4">
+      <div
+        class="p-4 lg:p-8 flex flex-col items-center lg:grid grid-rows-2 grid-flow-col"
+      >
+        <section class="row-start-1">
+          <a>
+            <img
+              src="../assets/wasl-logo-fin-removebg-preview.png"
+              class="w-28 lg:w-36"
+            />
+          </a>
+        </section>
+        <section class="row-start-2 col-start-3 lg:place-self-end">
+          <article class="flex flex-col">
+            <h2 class="font-bold text-white py-2 text-center text-xl">
+              For Queries
+            </h2>
+            <a href="tel:+919659434344">
+              <i class="fa-solid fa-phone text-pink-200 text-sm"></i>
+              <p class="text-pink-200 text-center lg:text-right inline-block">
+                +919659434344
+              </p>
+            </a>
+            <a href="mailto:info@waslintl.com">
+              <i class="fa-solid fa-envelope text-pink-200"></i>
+              <p class="text-pink-200 text-center lg:text-right inline-block">
+                info@waslintl.com
+              </p>
+            </a>
+          </article>
+        </section>
+
+        <section class="row-start-2">
+          <article>
+            <h2
+              class="text-center lg:text-left font-bold text-white text-xl py-2"
+            >
+              Meet Us
+            </h2>
+            <a href="https://goo.gl/maps/d3Y6nB2u15iaDAtm7" target="_blank">
+              <!-- <i class="fa-solid fa-location-dot px-py text-blue-600"></i> -->
+              <span
+                class="inline-block align-top text-white text-center lg:text-start"
+              >
+                <p class="">10/20A/4,East Kulasekaranputhur</p>
+                <p>Main Road, Vellamadam,</p>
+                <p>Kanyakumari - 629303</p>
+              </span>
+            </a>
+          </article>
+        </section>
+        <section
+          class="row-start-1 col-start-3 flex flex-row gap-5 justify-end pt-4 py-2 text-xl lg:text-3xl text-white"
+        >
+          <a href="https://twitter.com/waslintl" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/waslintl/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100090212914183"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/90854390/admin/feed/posts/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </section>
+        <!-- <p class="row-start-1 row-end-3 place-self-center py-4 text-white mt-auto">Copyright &#169; 2023 WASL</p> -->
+      </div>
+      <p class="row-start-1 row-end-3 pb-6 text-white text-center mt-auto">
+        Copyright &#169; 2023 WASL
+      </p>
+    </footer>
+
+    <script src="./js/singleProduct.js" type="module"></script>
+  </body>
+</html>
