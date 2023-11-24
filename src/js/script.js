@@ -1,6 +1,6 @@
 import { productList } from "./product.js";
 
-let productDisplay = productList.map((val, id) => {
+let productDisplay = productList && productList.map((val, id) => {
   console.log(val.productDesc);
   return `<div class="shadow-lg shadow-blue-10 flex flex-col group p-4">
     <img src="${val.productImg}" alt="product" />
