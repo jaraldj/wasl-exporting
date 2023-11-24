@@ -15,4 +15,4 @@ let productDisplay = productList && productList.map((val, id) => {
     </div>
     </div>`;
 });
-document.getElementById("prodLi").innerHTML = productDisplay ? productDisplay.join("");
+document.getElementById("prodLi").innerHTML = productDisplay ? productDisplay.join("") : "";
