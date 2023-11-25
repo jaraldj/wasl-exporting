@@ -1,10 +1,10 @@
 export const productList = [
     {
-        id: 1,
-        productName: "Coconut",
-        productImg: "../../assets/coconut.jpg",
-        productDesc: "Fresh and flavorful coconuts Harvested from tropical palms, our coconuts are versatile and nutritious. Perfect for enjoying as a refreshing snack or extracting coconut water, they can also be used to make coconut milk and oil. Don't miss out on the taste of the tropics—grab your coconuts today!",
-        singleProduct: [
+        "id": 1,
+        "productName": "Coconut",
+        "productImg": "../../assets/coconut.jpg",
+        "productDesc": "Fresh and flavorful coconuts Harvested from tropical palms, our coconuts are versatile and nutritious. Perfect for enjoying as a refreshing snack or extracting coconut water, they can also be used to make coconut milk and oil. Don't miss out on the taste of the tropics—grab your coconuts today!",
+        "singleProduct": [
             "Encased in a tough, fibrous husk, the coconut houses refreshing coconut water and a creamy, white flesh with a sweet and nutty flavor.",
             "Beyond its natural state, coconuts yield coconut milk and oil, adding culinary diversity.",
             "Rich in healthy fats, dietary fiber, and essential vitamins and minerals.",
@@ -16,11 +16,11 @@ export const productList = [
           ]
     },
     {
-        id: 2,
-        productName: "Coir Pith",
-        productImg: "../../assets/coconutPith.jpg",
-        productDesc: "Made from coconut husk fibers, this natural and sustainable block is a versatile growing medium for plants. With excellent water retention, aeration, and pH neutrality, it promotes optimal plant growth.",
-        singleProduct: [
+        "id": 2,
+        "productName": "Coir Pith",
+        "productImg": "../../assets/coconutPith.jpg",
+        "productDesc": "Made from coconut husk fibers, this natural and sustainable block is a versatile growing medium for plants. With excellent water retention, aeration, and pH neutrality, it promotes optimal plant growth.",
+        "singleProduct": [
             "Composition: Byproduct of coir fiber extraction from coconut husks; contains coir fibers and particles.",
             "Texture and Structure: Fine, peat-like texture; spongy and fibrous structure.",
             "pH Level: Slightly acidic to neutral (pH 5.5 to 6.8).",
