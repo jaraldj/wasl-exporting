@@ -31,7 +31,7 @@
           <!-- <div class="hidden lg:block nav-links">
             <ul class="flex flex-col lg:flex-row gap-8 text-white top-[20%]"> -->
           <div
-            class="nav-links lg:static absolute bg-blue-950 lg:bg-transparent lg:min-h-fit min-h-fit left-0 top-[8%] w-full lg:block hidden lg:py-0 py-14"
+            class="nav-links lg:static absolute bg-transparent lg:min-h-fit min-h-fit left-0 top-[8%] w-full lg:block hidden lg:py-0 py-14"
           >
             <div
               class="flex lg:items-end lg:justify-end items-center justify-center"
@@ -362,12 +362,14 @@
 
       window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
-        if (window.scrollY > 200) {
-          navbar.classList.remove("lg:bg-transparent");
-          navbar.classList.add("lg:bg-blue-950");
+        const navLinks = document.querySelector(".nav-links");
+        if (window.scrollY > 50) {
+          navbar.classList.remove("bg-transparent");
+          navbar.classList.add("bg-blue-950");
         } else {
-          navbar.classList.remove("lg:bg-blue-950");
-          navbar.classList.add("lg:bg-transparent");
+          navbar.classList.remove("bg-blue-950");
+          navbar.classList.add("bg-transparent");
+          navLinks.classList.add("bg-transparent")
         }
       });
 
@@ -384,6 +386,17 @@
           menuIcon.classList.remove("fa-xmark");
           menuIcon.classList.add("fa-bars");
           // navLinks.classList.add("hidden");
+        }
+        if(menuIcon.classList.contains("fa-xmark")){
+          menuIcon.classList.remove("bg-transparent")
+          menuIcon.classList.add("bg-blue-950")
+          navLinks.classList.remove("bg-transparent")
+          navLinks.classList.add("bg-blue-950")
+        } else {
+          navLinks.classList.remove("bg-blue-950")
+          navLinks.classList.add("bg-transparent")
+          menuIcon.classList.remove("bg-blue-950")
+          menuIcon.classList.add("bg-transparent")
         }
 
         navLinks.addEventListener("click", function () {

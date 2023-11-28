@@ -1,38 +1,51 @@
-import { productList } from "./product.js";
+let productList;
 
-console.log("222", productList);
+const apiUrl = 'http://localhost:7575/wasl/products';
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const nameurl = urlParams.get("name");
 const urlId = urlParams.get("id");
 
-let singleProdimg = productList.map((val, id) => {
-  if (urlId == val.id) {
-    return `
-        <img src="${val.productImg}" alt="singleProduct" />
-        `;
-  }
-});
+async function fetchData() {
+  try {
+    const response = await fetch(apiUrl);
 
-let singleList = productList.map((val, id) => {
-  if (urlId == val.id) {
-    return val.singleProduct
-      .map((value, id) => {
-        return `<li class="pb-4">${value}</li>`;
-      })
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    productList = data;
+
+    let singleProdimg = productList
+      .filter((val) => urlId == val.id)
+      .map((val) => `<img src="${val.productImg}" alt="singleProduct" />`)
       .join("");
+
+    let singleList = productList
+      .filter((val) => urlId == val.id)
+      .map((val) =>
+        val.singleProduct
+          .map((value) => `<li class="pb-4">${value}</li>`)
+          .join("")
+      )
+      .join("");
+
+    document.getElementById("singleProductImage").innerHTML = singleProdimg;
+    document.getElementById("cocoLi").innerHTML = singleList;
+  } catch (error) {
+    console.error('Error fetching data:', error);
   }
-});
+}
+
+fetchData();
 
 let whatsapp = `<a href="https://api.whatsapp.com/send?phone=+919659434344&text=Can%20I%20know%20detail%20about%20${nameurl}" class="flex items-start justify-center text-xl" target="_blank">
-<i class="fa-brands fa-whatsapp text-3xl lg:text-4xl mr-2"></i>
-For Inquiries
+<i class="fa-brands fa-whatsapp text-3xl lg:text-4xl"></i>
+&nbsp;For Inquiries
 </a>`;
 
-
-document.getElementById("singleProductImage").innerHTML = singleProdimg.join("")
 document.getElementById("prodName").innerText = nameurl;
 document.getElementById("prodTitle").innerText = nameurl;
-document.getElementById("cocoLi").innerHTML = singleList.join("");
 document.getElementById("whatsap").innerHTML = whatsapp;
