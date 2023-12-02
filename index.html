@@ -7,6 +7,8 @@
     <title>WASL</title>
     <link rel="stylesheet" href="./css/tailwind.css" />
 
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -195,9 +197,10 @@
         <h2 class="text-5xl pt-20 pb-8 text-blue-950 font-bold text-center">
           Products
         </h2>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-10 pb-10" id="prodLi">
-          
-        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-10 pb-10"
+          id="prodLi"
+        ></div>
         <!-- <div class="mt-14 flex justify-center pb-6">
           <a
             href="#"
@@ -209,9 +212,9 @@
 
       <!-- contact section -->
       <div
-        class="bg-backimg2 bg-fixed bg-no-repeat bg-cover bg-center text-center flex flex-col justify-center items-center"
+        class="bg-backimg3 bg-fixed bg-no-repeat bg-cover bg-center text-center flex flex-col justify-center items-center"
       >
-      <!-- <video autoplay muted loop class="fixed inset-0 w-full object-cover text-center bg-fixed" src="assets/WhatsApp Video 2023-11-19 at 7.22.36 PM.mp4"> -->
+        <!-- <video autoplay muted loop class="fixed inset-0 w-full object-cover text-center bg-fixed" src="assets/WhatsApp Video 2023-11-19 at 7.22.36 PM.mp4"> -->
         <div class="py-28">
           <p class="text-5xl text-white font-bold">
             Your INDIAN Merchant Partner
@@ -221,7 +224,6 @@
             Quality Products from India at a competitive cost
           </p>
         </div>
-      <!-- </video> -->
       </div>
 
       <!--  -->
@@ -281,13 +283,13 @@
               <h2 class="font-bold text-white py-2 text-center text-xl">
                 For Queries
               </h2>
-              <a href="tel:+919659434344">
+              <a href="tel:+919659434344" class="text-center lg:text-left">
                 <i class="fa-solid fa-phone text-pink-200 text-sm"></i>
                 <p class="text-pink-200 text-center lg:text-right inline-block">
                   +919659434344
                 </p>
               </a>
-              <a href="mailto:info@waslintl.com">
+              <a href="mailto:info@waslintl.com" class="text-center lg:text-left">
                 <i class="fa-solid fa-envelope text-pink-200"></i>
                 <p class="text-pink-200 text-center lg:text-right inline-block">
                   info@waslintl.com
@@ -351,7 +353,6 @@
           <i class="fa-brands fa-whatsapp text-3xl lg:text-4xl text-white"></i>
         </a>
       </div>
-
     </div>
 
     <script type="module" src="./src/js/script.js"></script>
@@ -359,6 +360,15 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <script>
+
+      // window.onload = () => {
+      //   const navbar = document.getElementById("navbar");
+      //   const navLinks = document.querySelector(".nav-links");
+      //   if(window.length > 50){
+      //     navbar.classList.add("bg-blue-950")
+      //     navLinks.classList.add("bg-blue-950");
+      //   }
+      // }
 
       window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
@@ -369,7 +379,7 @@
         } else {
           navbar.classList.remove("bg-blue-950");
           navbar.classList.add("bg-transparent");
-          navLinks.classList.add("bg-transparent")
+          navLinks.classList.add("bg-transparent");
         }
       });
 
@@ -387,16 +397,16 @@
           menuIcon.classList.add("fa-bars");
           // navLinks.classList.add("hidden");
         }
-        if(menuIcon.classList.contains("fa-xmark")){
-          menuIcon.classList.remove("bg-transparent")
-          menuIcon.classList.add("bg-blue-950")
-          navLinks.classList.remove("bg-transparent")
-          navLinks.classList.add("bg-blue-950")
+        if (menuIcon.classList.contains("fa-xmark")) {
+          menuIcon.classList.remove("bg-transparent");
+          menuIcon.classList.add("bg-blue-950");
+          navLinks.classList.remove("bg-transparent");
+          navLinks.classList.add("bg-blue-950");
         } else {
-          navLinks.classList.remove("bg-blue-950")
-          navLinks.classList.add("bg-transparent")
-          menuIcon.classList.remove("bg-blue-950")
-          menuIcon.classList.add("bg-transparent")
+          navLinks.classList.remove("bg-blue-950");
+          navLinks.classList.add("bg-transparent");
+          menuIcon.classList.remove("bg-blue-950");
+          menuIcon.classList.add("bg-transparent");
         }
 
         navLinks.addEventListener("click", function () {
