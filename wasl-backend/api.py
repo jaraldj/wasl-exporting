@@ -12,8 +12,50 @@ import pandas as pd
 from io import BytesIO
 from urllib.request import urlopen
 
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
+godaddy_email = "info@waslintl.com"
+godaddy_password = "Hello@2023"
+EMAIL_ID = "waslinternl@gmail.com"
 sheet_url = 'https://docs.google.com/spreadsheets/d/1l2Zug9NZKU_7rmaTYeJIUjIS19JH_Kv509ybyukpPn4/export?format=xlsx'
+VIST_COUNT = 0
+
+
+
+def make_contact_us_msg(json_input):
+    # try:
+        msg = MIMEMultipart()
+        msg['From'] = godaddy_email
+        msg['Subject'] = "contact request"
+        
+        text  = json_input.pop('message')
+        table_html = pd.DataFrame({k:[v] for k,v in json_input.items()},).to_html(index=False,)
+        msg.attach(MIMEText(f'<p>{table_html}</p>', 'html'))
+        msg.attach(MIMEText(text, 'plain'))
+        return msg
+    
+def send_email(subject=None, body=None, mime_object=None):
+    try:
+        if mime_object:
+            mime_object['To'] = EMAIL_ID
+
+        with smtplib.SMTP('smtpout.secureserver.net', 587) as server:
+            # Start TLS for security
+            server.starttls()
+
+            # Login to your GoDaddy email account
+            server.login(godaddy_email, godaddy_password)
+
+            # Send the email
+            server.sendmail(godaddy_email, EMAIL_ID, mime_object.as_string())
+        print('worked')
+        return True
+    except:
+        return False
+
+
 
 
 def get_products():
@@ -95,33 +137,30 @@ async def health_check():
 
 
 @app.get("/wasl/products", response_model=dict, response_class=PrettyJSONResponse)
-async def columnizedExtraction():
+async def serve_products():
     try:
+        # VIST_COUNT += 1
         return JSONResponse(PRODUCTS)
     except Exception as e:
         # logger.exception(e)
         return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content=str(e))
     finally:
         pass
-    
-    
-# @app.post("/wasl/sendmail", response_model=str, response_class=PlainTextResponse)
-# async def columnizedExtraction(file: UploadFile = File(...)):
-#     """
-#         COlumnaR Text EXtractor, when given a PDF file, the service converts to plain text based columnized content\n
-#     """
-#     # logger.info("columnar text extractor process started")
-#     print(f"pdf to text conversion - {file.filename}")
-#     file_location = f"{file.filename}"
-#     try:
-#         pdf_bytes = await file.read()
-#         await file.close()
-#         return await run_in_threadpool(col_txt_ext, pdf_bytes)
-#     except Exception as e:
-#         # logger.exception(e)
-#         return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content=str(e))
-#     finally:
-#         pass
+
+@app.post("/wasl/contact_us", response_model=dict)
+async def contact_us_mailer(json_data: dict):
+    try:
+        if send_email(mime_object = make_contact_us_msg(json_data)):
+            return JSONResponse({'status':True})
+        else:
+            return JSONResponse({'status':False})
+        
+    except Exception as e:
+        # logger.exception(e)
+        return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content=str(e))  
+    finally:
+        pass
+
 
 
 

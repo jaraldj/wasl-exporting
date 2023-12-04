@@ -20,7 +20,7 @@
   <body>
     <div>
       <!-- header starts here -->
-      <header class="fixed top-0 w-screen py-3 z-10 bg-blue-950" id="navbar">
+      <header class="fixed top-0 w-screen py-3 z-10 bg-transparent" id="navbar">
         <nav class="flex flex-row justify-between px-4 lg:px-36 items-center">
           <div>
             <a href="#home">
@@ -212,10 +212,10 @@
 
       <!-- contact section -->
       <div
-        class="bg-backimg3 bg-fixed bg-no-repeat bg-cover bg-center text-center flex flex-col justify-center items-center"
+        class="bg-backimg4 lg:bg-backimg3 bg-fixed bg-no-repeat bg-cover bg-center text-center flex flex-col justify-center items-center"
       >
         <!-- <video autoplay muted loop class="fixed inset-0 w-full object-cover text-center bg-fixed" src="assets/WhatsApp Video 2023-11-19 at 7.22.36 PM.mp4"> -->
-        <div class="py-28">
+        <div class="py-32">
           <p class="text-5xl text-white font-bold">
             Your INDIAN Merchant Partner
           </p>
@@ -239,25 +239,33 @@
             <input
               type="text"
               class="py-2 pl-4 border-2 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
+              id="nameInput"
+              required
               placeholder="Enter Name *"
             />
             <input
               class="py-2 pl-4 border-blue-800 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
+              id="phoneInput"
               type="tel"
+              required
               placeholder="Phone Number *"
             />
             <input
               class="py-2 pl-4 border-blue-800 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
+              id="emailInput"
               type="email"
+              required
               placeholder="Email *"
             />
             <textarea
               class="py-2 pl-4 border-blue-800 rounded-lg border-opacity-50 outline-none focus:border-blue-700"
+              id="messageInput"
               placeholder="Message *"
             ></textarea>
             <div class="flex justify-center">
               <button
                 class="bg-blue-500 rounded-full py-2 px-5 text-white w-fit hover:bg-blue-600"
+                onclick="postData()"
               >
                 Submit
               </button>
@@ -355,66 +363,9 @@
       </div>
     </div>
 
-    <script type="module" src="./src/js/script.js"></script>
+    <script src="./src/js/script.js"></script>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-    <script>
-
-      // window.onload = () => {
-      //   const navbar = document.getElementById("navbar");
-      //   const navLinks = document.querySelector(".nav-links");
-      //   if(window.length > 50){
-      //     navbar.classList.add("bg-blue-950")
-      //     navLinks.classList.add("bg-blue-950");
-      //   }
-      // }
-
-      window.addEventListener("scroll", function () {
-        const navbar = document.getElementById("navbar");
-        const navLinks = document.querySelector(".nav-links");
-        if (window.scrollY > 50) {
-          navbar.classList.remove("bg-transparent");
-          navbar.classList.add("bg-blue-950");
-        } else {
-          navbar.classList.remove("bg-blue-950");
-          navbar.classList.add("bg-transparent");
-          navLinks.classList.add("bg-transparent");
-        }
-      });
-
-      const onToggleMenu = (icon) => {
-        const navbar = document.getElementById("navbar");
-        const menuIcon = icon;
-        const navLinks = document.querySelector(".nav-links");
-        navLinks.classList.toggle("hidden");
-
-        if (menuIcon.classList.contains("fa-bars")) {
-          menuIcon.classList.remove("fa-bars");
-          menuIcon.classList.add("fa-xmark");
-        } else {
-          menuIcon.classList.remove("fa-xmark");
-          menuIcon.classList.add("fa-bars");
-          // navLinks.classList.add("hidden");
-        }
-        if (menuIcon.classList.contains("fa-xmark")) {
-          menuIcon.classList.remove("bg-transparent");
-          menuIcon.classList.add("bg-blue-950");
-          navLinks.classList.remove("bg-transparent");
-          navLinks.classList.add("bg-blue-950");
-        } else {
-          navLinks.classList.remove("bg-blue-950");
-          navLinks.classList.add("bg-transparent");
-          menuIcon.classList.remove("bg-blue-950");
-          menuIcon.classList.add("bg-transparent");
-        }
-
-        navLinks.addEventListener("click", function () {
-          menuIcon.classList.remove("fa-xmark");
-          menuIcon.classList.add("fa-bars");
-          navLinks.classList.add("hidden");
-        });
-      };
-    </script>
   </body>
 </html>

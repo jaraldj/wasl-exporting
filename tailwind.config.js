@@ -10,6 +10,8 @@ module.exports = {
           'url("https://cdn.pixabay.com/photo/2021/09/16/21/27/container-ship-6631117_1280.jpg")',
         'backimg3' :
           'url("https://drive.google.com/uc?export=view&id=1m2oWLMFfu93HlVyPzG406U6gMNwZzUFc")',
+        'backimg4' :
+          'url("https://drive.google.com/uc?export=view&id=1GVrrmjITxOzAx-H2Sx0V45t2ikRfResf")'
       },
     },
   },
