@@ -1,6 +1,6 @@
 let productList;
 
-const apiUrl = 'http://34.202.161.249:7575/wasl/products';
+const apiUrl = '34.202.161.249:7575/wasl/products';
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
