@@ -1,10 +1,10 @@
 let productList;
 
 //product api
-const apiUrl = "http://34.202.161.249:7575/wasl/products";
+const apiUrl = "https://34.202.161.249:7575/wasl/products";
 
 // contact api
-const contactApi = "http://34.202.161.249:7575/wasl/contact_us";
+const contactApi = "https://34.202.161.249:7575/wasl/contact_us";
 
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
