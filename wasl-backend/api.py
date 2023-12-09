@@ -173,4 +173,4 @@ if __name__ == "__main__":
 
     PRODUCTS = get_products()
 
-    uvicorn.run(app, host="waslinternational.com", port=7575, ssl_keyfile="/home/ubuntu/ssl/privkey.pem", ssl_certfile="/home/ubuntu/ssl/fullchain.pem")
+    uvicorn.run(app, host="www.waslinternational.com", port=7575, ssl_keyfile="/home/ubuntu/ssl/privkey.pem", ssl_certfile="/home/ubuntu/ssl/fullchain.pem")
