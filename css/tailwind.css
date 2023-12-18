@@ -844,12 +844,20 @@ video {
   background-image: url('https://images.unsplash.com/photo-1585713181935-d5f622cc2415?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
 }
 
-.bg-backimg4 {
-  background-image: url("https://drive.google.com/uc?export=view&id=1GVrrmjITxOzAx-H2Sx0V45t2ikRfResf");
+.bg-backimg3 {
+  background-image: url("https://drive.google.com/uc?export=view&id=1m2oWLMFfu93HlVyPzG406U6gMNwZzUFc");
 }
 
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-backimg5 {
+  background-image: url("https://drive.google.com/uc?export=view&id=1A0DaYnPurRmO3UkGMNkqWNfouOso0V7c");
+}
+
+.bg-backimg4 {
+  background-image: url("https://drive.google.com/uc?export=view&id=1GVrrmjITxOzAx-H2Sx0V45t2ikRfResf");
 }
 
 .from-blue-950 {
