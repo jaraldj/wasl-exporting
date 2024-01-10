@@ -59,7 +59,7 @@ document.getElementById("cocoLi").innerHTML = singleList;
 
 // fetchData();
 
-let whatsapp = `<a href="https://api.whatsapp.com/send?phone=+919659434344&text=Can%20I%20know%20detail%20about%20${nameurl}" class="flex items-start justify-center text-xl" target="_blank">
+let whatsapp = `<a href="https://api.whatsapp.com/send?phone=+918015529966&text=Can%20I%20know%20detail%20about%20${nameurl}" class="flex items-start justify-center text-xl" target="_blank">
 <i class="fa-brands fa-whatsapp text-3xl lg:text-4xl"></i>
 &nbsp;For Inquiries
 </a>`;
